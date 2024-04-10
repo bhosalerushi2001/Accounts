@@ -1,0 +1,34 @@
+<h1>Add your data</h1>
+
+<h2>Personal details </h2><br>
+
+name:
+<input type="text" [(ngModel)]="obj.name"><br>
+father name:
+<input type="text" [(ngModel)]="obj.father_name"><br>
+Date of Birth :
+<input type="date" [(ngModel)]="obj.date_of_Birth"><br>
+Aadhar Number :
+<input type="number" [(ngModel)]="obj.aadhar_Number"><br>
+Mobile Number :
+<input type="number" [(ngModel)]="obj.mobile_Number"><br>
+Email :
+<input type="email" [(ngModel)]="obj.email"><br>
+ Full Address :
+<input type="text" [(ngModel)]="obj.full_Address"><br>
+
+<br><br><br>
+
+<h2>Bank Details</h2><br>
+
+Bank Name :
+<input type="text" [(ngModel)]="obj.bank_Name"><br>
+Accoount number :
+<input type="number" [(ngModel)]="obj.accoount_number"><br>
+IFSC code:
+<input type="text" [(ngModel)]="obj.iFSC_code"><br>
+
+
+<button (click)="submit()">Submit</button>
+
+

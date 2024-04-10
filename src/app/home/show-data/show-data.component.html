@@ -1,0 +1,61 @@
+<div *ngIf="progress==0">
+    <h2>
+        <button (click)="load()">Load Data</button>
+    </h2>
+    
+    <div *ngIf="table==1">
+        <table border="1">
+            <tr >
+               <td>id</td>
+               <td>Name</td>
+               <td>father_name</td>
+               <td>Email</td>
+               <td>date_of_Birth</td>
+               <td>aadhar_Number</td>
+               <td>mobile_Number</td>
+               <td>full_Address</td>
+               <td>bank_Name</td>
+               <td>accoount_number</td>
+               <td>iFSC_code</td>
+               <td>WORK</td>
+              
+            </tr>
+        
+            <tr *ngFor="let project of details, let i=index" >
+                <td>{{project.id}}</td>
+                <td>{{project.name}}</td>
+                <td>{{project.father_name}}</td>
+                <td>{{project.email}}</td>
+                <td>{{project.date_of_Birth|date}}</td>
+                <td>{{project.aadhar_Number}}</td>
+                <td>{{project.mobile_Number}}</td>
+                <td>{{project.full_Address}}</td>
+                <td>{{project.bank_Name}}</td>
+                <td>{{project.accoount_number}}</td>
+                <td>{{project.iFSC_code}}</td>
+                <td>
+                  <button (click)="work(2, project.id)">Income Tax</button>
+                  <button (click)="work(3,project.id)">Provident Fund</button>
+                  <button (click)="work(1, project.id)">Company</button>
+                
+                </td>
+    
+               
+             </tr>
+        </table>
+        
+    </div>
+    
+
+</div>
+
+<div  *ngIf="progress==1">
+    <app-company></app-company>
+</div>
+<div *ngIf="progress==2">
+    <app-income-tax></app-income-tax>
+</div>
+<div *ngIf="progress==3">
+
+    <app-provident-fund></app-provident-fund>
+</div>
